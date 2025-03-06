@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
    images: {
-      domains: ["bibaanbackend.webspulses.com"], // ✅ Add your external domain here
+      remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'bibaanbackend.webspulses.com',
+      },
+    ],
    },
    typescript: {
     // !! WARN !!
