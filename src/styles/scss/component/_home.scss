@@ -230,17 +230,6 @@
             transform: unset;
             border-radius: 15px;
         }
-
-        .swiper-slide  {
-            @include breakpoint($sm, down){
-                .image-wrap{
-                    width: 100%;
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
     }
 
     .swiper-slide {

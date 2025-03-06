@@ -1561,14 +1561,6 @@ header .btn-wrapper li:last-child a:hover {
           transform: unset;
   border-radius: 15px;
 }
-@media screen and (max-width: 575.72px) {
-  .latest-sec.type2 .swiper-slide .image-wrap {
-    width: 100%;
-  }
-  .latest-sec.type2 .swiper-slide .image-wrap img {
-    width: 100%;
-  }
-}
 .latest-sec .swiper-slide {
   height: auto;
   display: -webkit-box;
