@@ -1,0 +1,28 @@
+:root {
+    --c-black: #000;
+    --c-body: #000;
+    --c-white: #ffffff;
+    --c-primary: #20B486;
+    --c-secondary: #565568;
+    --c-text: #6D737A;
+    --c-gray: #F2F2F2;
+    --c-title: #06241B;
+    --c-border: #E7E7E7;
+    --c-yellow: #E59819;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+$primary-font: "Inter",
+serif;
+
+
+
+$xs: 420px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 1600px;
+$xxxxl: 1800px;

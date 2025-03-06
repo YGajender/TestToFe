@@ -1,0 +1,246 @@
+.aboardmbbs-section {
+    padding-top: 60px;
+    .title {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    h4 {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0 0 0 1rem;
+
+        li {
+            margin-bottom: 15px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 10px;
+                border-bottom: 2px solid var(--c-primary);
+                background-color: var(--c-primary);
+                margin-right: 12px;
+                margin-top: 0.7rem;
+            }
+        }
+    }
+
+    .left {
+        padding: 30px 20px;
+        border-radius: 10px;
+        border: 1px solid #DDDDDD;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        * {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .right {
+        padding: 30px 20px;
+        border-radius: 10px;
+        border: 1px solid #DDDDDD;
+        background-color: #F4F4FE;
+        @include breakpoint($md, down){
+            margin-top: 30px;
+        }
+    }
+}
+
+
+
+/* aboardswiper-sec css start */
+
+.aboardswiper-sec{
+    padding: 60px 0 0;
+
+    
+    .swiper-controls {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+
+        @include breakpoint($md, down) {
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 44px;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--c-secondary);
+            position: relative;
+            border-radius: 50%;
+            transition: all .32s ease-in-out;
+            border: 1px solid var(--c-black);
+            background-color: transparent;
+
+            &:hover {
+                background-color: var(--c-primary);
+                color: var(--c-white);
+                border-color: var(--c-primary);
+            }
+
+            &::after {
+                font-size: 18px;
+                transition: all .32s ease-in-out;
+
+
+            }
+        }
+
+        .swiper-button-prev {
+            margin-right: 30px;
+        }
+    }
+    
+
+    .left {
+        padding-bottom: 40px;   
+        h4 {
+            font-weight: bold;
+        }
+    }
+
+    .inner-item {
+        padding: 30px;
+        background-color: var(--c-white);
+        border-radius: 10px;
+        width: 100%;
+
+        img {
+            margin-bottom: 16px;
+        }
+
+        h6 {
+            font-weight: bold;
+        }
+    }
+
+
+    .swiper-slide {
+        display: flex;
+        height: auto;
+    }
+
+}
+
+
+
+
+/* video-with-content css start */
+
+
+.video-with-content{
+    margin-top: 50px;
+    .title {
+        padding-bottom: 30px; 
+        h2 {
+            font-weight: bold   ;
+        }  
+    }
+}
+
+
+/* healf-section css start */
+
+.healf-section {
+    position: relative;
+    background-color: #F2F5F2;
+    margin-top: 50px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        @include breakpoint($md){
+            background-color: #2E708B;
+        }
+    }
+
+    .row {
+        position: relative;
+        z-index: 2;
+
+        &>div {
+            display: flex;
+            &:nth-child(1){
+                  background-color: #2E708B;
+            }
+            
+        }
+    }
+    
+    .left{
+        width: 100%;
+        color: var(--c-white);
+        padding: 30px 20px;
+
+         * {
+            color: inherit;
+         }
+
+        h6 {
+            font-weight: bold;
+        }
+
+        ul {
+            li {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .right {
+        width: 100%;
+        padding: 30px 20px;
+        h6 {
+            font-weight: bold;
+        }
+
+        ul {
+            li {
+                margin-bottom: 12px;
+            }
+        }
+
+    }
+}
+
+
+
+
+/* aboard-outercss start */
+
+
+.aboard-outer{
+    .college-inner-info {
+        box-shadow: none;
+    }
+}

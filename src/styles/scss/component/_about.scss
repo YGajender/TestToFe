@@ -1,0 +1,51 @@
+/* full-width-content css stat */
+
+
+.full-width-content {
+    padding: 60px 0;
+    background: rgb(82,189,170);
+    background: linear-gradient(90deg, rgba(82,189,170,0.13608771145176823) 0%, rgba(255,255,255,0) 36%); 
+
+    h4 {
+        font-weight: 500;
+    }
+
+    .title {
+        padding-bottom: 40px;
+    }
+
+
+    .mission {
+        background-color: var(--c-white);
+        border-radius: 15px;
+        padding: 40px 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        box-shadow: 0px 0px 60px 30px #00000008;
+
+        @include breakpoint($md, down) {
+            margin-bottom: 30px;
+
+            img {
+                margin-bottom: 20px;
+            }
+        }
+
+        .content {
+            padding: 0 20px;
+            @include breakpoint($md){
+                width: 80%;
+            }
+
+            h5 {
+                font-weight: bold;
+            }
+        }
+
+
+        &.vision {
+            background-color: #EAEEED;
+        }
+    }
+}

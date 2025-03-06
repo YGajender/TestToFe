@@ -1,0 +1,191 @@
+.our-webinar-sec {
+    padding: 60px 0;
+
+    .webinar-item {
+        border: 0.24px solid;
+        border-image-source: linear-gradient(0deg, rgba(32, 180, 134, 0) 13.11%, rgba(32, 180, 134, 0.324) 57.56%, rgba(32, 180, 134, 0) 99.99%);
+        padding: 40px 60px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 25px 0px #0000001A;
+        text-align: center;
+        width: 100%;
+
+        @include breakpoint($lg, down) {
+            margin-bottom: 30px;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+    }
+
+
+    .title {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 30px;
+
+        @include breakpoint($md) {
+            padding-bottom: 40px;
+        }
+    }
+
+
+    .row {
+        &>div {
+            display: flex;
+        }
+    }
+}
+
+
+
+
+
+/* admission-career-sec css start */
+
+
+.admission-career-sec {
+    padding-bottom: 60px;
+
+    .title {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .check-box-wrapper {
+        border: none !important;
+    }
+
+    .nav-pills {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        gap: 10px;
+        margin-top: 40px;
+
+        @include breakpoint($lg) {
+            gap: 20px;
+            margin-top: 0px;
+
+        }
+
+        li {
+            .nav-link {
+                display: inline-block;
+                border: 1px solid #D6E4E0;
+                background-color: #F3FBFE;
+                border-radius: 30px;
+                color: var(--c-secondary);
+                padding: 10px 16px;
+                font-size: 14px;
+
+                @include breakpoint($md) {
+                    padding: 12px 30px;
+                    font-size: 16px;
+                }
+
+                &.active {
+                    border-color: var(--c-primary);
+                    color: var(--c-primary);
+                }
+            }
+        }
+    }
+
+    .tab-pane {
+        .row {
+            &>div {
+                display: flex;
+            }
+        }
+    }
+
+
+    .row {
+        &>div {
+            &:not(:last-child) {
+                @include breakpoint($md, down){
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+
+    .class-item {
+        padding: 12px;
+        background-color: var(--c-white);
+        border: 1px solid #D6E4E0;
+        border-radius: 16px;
+        width: 100%;
+        margin: 0 0 30px;
+
+        img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h6 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding: 0;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--c-secondary);
+            margin: 0 0 12px !important;
+
+            li {
+                list-style: none;
+                margin-bottom: 12px;
+                color: var(--c-title);
+                display: flex;
+                align-items: flex-start;
+
+                span {
+                    color: var(--c-text);
+                }
+
+                p {
+                    color: var(--c-title);
+                }
+
+                i,
+                svg {
+                    margin-right: 12px;
+                    color: var(--c-text);
+
+                }
+            }
+        }
+
+        .bottom-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+
+            .live {
+
+                i,
+                svg {
+                    color: var(--c-primary);
+                    margin-right: 12px;
+                }
+            }
+
+            .join {
+                a {
+                    @include button;
+                }
+            }
+        }
+    }
+}

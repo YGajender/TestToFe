@@ -1,0 +1,460 @@
+.dashboard-sec {
+    margin-top: 82px;
+    padding-top: 22px;
+
+
+    .label-with-radio {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @include breakpoint($md) {
+            gap: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    .modal-open & {
+        filter: blur(2px);
+    }
+
+
+    .left-sidebar {
+        padding: 20px 0px;
+        background-color: var(--c-white);
+        border-radius: 10px;
+        box-shadow: 2px 4px 30px 0px #0000000A;
+
+        @include breakpoint($lg, down) {
+            display: none;
+        }
+
+
+        .logged-in {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 0 12px;
+
+            .user-img {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-color: #D7F0E8;
+                font-size: 32px;
+            }
+
+            h6 {
+                margin-left: 12px;
+                color: var(--c-title);
+                font-weight: bold;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0 0 40px;
+
+            li {
+                list-style: none;
+
+                &:first-child {
+                    a {
+                        color: var(--c-primary);
+
+                        &::after {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    svg {
+                        color: inherit;
+                    }
+                }
+
+                a {
+                    padding: 10px 12px;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: var(--c-title);
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    transition: all .32s ease-in-out;
+                    font-size: 14px;
+                    @include breakpoint($xl){
+                        font-size: 16px;
+                    }
+
+
+                    svg {
+                        color: #DFDFDF;
+                        margin-right: 12px;
+                        transition: all .32s ease-in-out;
+                    }
+
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: calc(100% - 10px);
+                        top: 0;
+                        width: 60px;
+                        height: 100%;
+                        border-radius: 20px;
+                        background-color: var(--c-primary);
+                        transform: rotate(45deg);
+                        opacity: 0;
+                        transition: all .32s ease-in-out;
+                    }
+
+
+                    &:hover {
+                        color: var(--c-primary);
+
+                        &::after {
+                            opacity: 1;
+                        }
+
+                        svg {
+                             color: var(--c-primary);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .complete {
+            padding: 20px 12px 30px;
+            margin-top: 20px;
+            border-top: 1px solid var(--c-gray);
+
+            h6 {
+                font-weight: bold;
+                margin-bottom: 12px;
+            }
+
+            .progress {
+                height: 10px;
+                margin-bottom: 20px;
+
+                .progress-bar {
+                    background-color: var(--c-primary);
+                }
+            }
+
+            label {
+                font-weight: 500;
+            }
+        }
+
+    }
+
+
+    .wrapper {
+        &>.radio-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+            flex-wrap: nowrap;
+            overflow: auto;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                width: 0px!important;
+                height: 0px!important;
+            }
+
+
+            @include breakpoint($md, down) {
+            }
+
+            .form-check {
+                position: relative;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                padding-left: 0;
+                padding-right: 12px;
+
+                @include breakpoint($xxl) {
+                    padding-right: 20px;
+                }
+                
+
+                &:not(:last-child) {
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 70%;
+                        left: 62%;
+                        top: 0;
+                        border-top: 3px solid #CFD6DC;
+                        border-radius: 3px;
+                        margin-top: 9px;
+                    }
+                }
+
+                input[type="radio"] {
+                    width: 20px;
+                    height: 20px;
+                    border-color: transparent;
+                    box-shadow: none;
+                    background-color: #CFD6DC;
+                    margin: 0 0 10px;
+                }
+
+
+                input[type="radio"]:checked {
+                    background-color: transparent;
+                    border-color: var(--c-primary);
+                    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2320B486'/%3e%3c/svg%3e");
+
+
+                    &~label {
+                        color: var(--c-primary);
+                    }
+                }
+
+                &.active {
+                     input[type="radio"] {
+                        background-color: var(--c-primary);
+                        background-size: 10px;
+                        --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23fff' d='M13.854 3.646a.5.5 0 0 0-.708 0L6 10.793 3.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l8-8a.5.5 0 0 0 0-.708z'/%3e%3c/svg%3e");
+                    }
+                }
+
+
+                label {
+                    white-space: nowrap;
+                }
+            }
+
+
+            label {
+                font-weight: 500;
+                position: relative;
+                margin: 0;
+                padding-left: 8px;
+                font-size: 13px;
+
+                @include breakpoint($xxl) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* right-side css start */
+.right-side {
+    overflow: hidden;
+
+    @include breakpoint($md) {
+        padding-left: 5%;
+    }
+
+    .title {
+        padding-bottom: 30px;
+
+        h4 {
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 10px;
+            margin: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 30px;
+                height: 3px;
+                background-color: var(--c-primary);
+            }
+        }
+    }
+
+    .wrapper {
+        width: 100%;
+        background-color: var(--c-white);
+        border-radius: 10px;
+        padding: 24px 12px;
+
+        @include breakpoint($md) {
+            padding: 30px 20px;
+        }
+
+        @include breakpoint($xl) {
+            padding: 40px 32px;
+        }
+    }
+
+    h6 {
+        font-weight: 600;
+    }
+
+}
+
+
+.basic-detail {
+    .inner-title {
+        padding-bottom: 30px;
+    }
+
+    .input-wrapper {
+        margin-bottom: 20px;
+
+        label {
+            margin-bottom: 4px;
+        }
+
+        .form-group {
+            .border {
+                padding: 14px 12px !important;
+                align-items: center;
+
+                span {
+                    padding: 6px 10px;
+                    margin: 0 !important;
+                    background-color: #ECECEC !important;
+                    color: #4A5568 !important;
+                    margin-right: 12px !important;
+                    font-weight: 400;
+                    cursor: pointer;
+                    font-size: 12px !important;
+                }
+
+                .btn-close {
+                    all: unset;
+                    background-color: transparent;
+                    background: transparent !important;
+                    color: #4A5568 !important;
+                }
+            }
+
+            .form-control {
+                box-shadow: none;
+                border: none;
+                padding: 0 30px;
+                width: auto;
+                display: inline-block;
+                flex: auto;
+            }
+        }
+    }
+}
+
+
+
+/* form-control css start */
+
+.form-control,
+.form-select {
+    padding: 12px 20px;
+    background-color: #F7FAFC;
+    border-radius: 8px;
+    border: 1px solid #CBD5E0;
+
+
+    &.bg-input {
+        background-color: #E4E4E4;
+    }
+}
+
+.inner-wrapper {
+    padding-top: 30px;
+
+    p {
+        @include breakpoint($md, down) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 10px;
+
+    .form-check {
+        position: relative;
+        align-items: center;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 20px;
+
+        input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            border-color: transparent;
+            box-shadow: none;
+            background-color: #CFD6DC;
+            margin: 0 0 10px;
+        }
+
+        input[type="radio"]:checked {
+            background-color: transparent;
+            border-color: var(--c-primary);
+            --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2320B486'/%3e%3c/svg%3e");
+        }
+
+        label {
+            white-space: nowrap;
+        }
+
+    }
+
+
+    label {
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        margin: 0 0 5px;
+        padding-left: 8px;
+    }
+}
+
+
+
+
+/* button-wrapper cs start */
+
+
+.button-wrapper {
+    padding-top: 30px;
+    margin-top: 30px;
+    text-align: right;
+    border-top: 1px solid #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+
+    &.type2 {
+        justify-content: flex-end;
+    }
+
+    a,
+    button {
+        @include button;
+
+        &.default {
+            @include button('secondary')
+        }
+    }
+}
